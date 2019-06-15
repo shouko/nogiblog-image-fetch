@@ -7,5 +7,4 @@ install:
 jobs:
   include:
     - stage: 'Run Task'
-      if: type = cron
       script: node index.js
