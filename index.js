@@ -8,7 +8,7 @@ Promise.all([1, 2, 3, 4, 5, 6, 7].map(function(e) {
 })).then(function(res) {
     var resText = res.join()
     var links = []
-    var re = /<a href="http:\/\/dcimg.awalker.jp\/view\/([^\"]+)">/g
+    var re = /<a href="http:\/\/dcimg.awalker.jp\/[^\/]+\/([^\"]+)">/g
     var m
     while (m = re.exec(resText)) {
         links.push(m[1])
