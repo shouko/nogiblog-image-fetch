@@ -4,8 +4,8 @@ node_js:
   - '8'
 install:
  - npm install
-script:
- - stage: 'Run Task'
-   if: type = cron
-   script:
-     - node index.js
+jobs:
+  include:
+    - stage: 'Run Task'
+      if: type = cron
+      script: node index.js
