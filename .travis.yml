@@ -8,3 +8,4 @@ jobs:
   include:
     - stage: 'Run Task'
       script: node index.js
+      after_script: bash ./telegram_notify.sh
